@@ -33,8 +33,14 @@ async function apiData() {
     data.users.forEach((user, i) => {
       let fullName = user.firstName + " " + user.lastName;
       if (
-        fullName.toLowerCase().trim().includes(e.target.value.trim()) ||
-        user.university.toLowerCase().trim().includes(e.target.value.trim())
+        fullName
+          .toLowerCase()
+          .trim()
+          .includes(e.target.value.toLowerCase().trim()) ||
+        user.university
+          .toLowerCase()
+          .trim()
+          .includes(e.target.value.toLowerCase().trim())
       ) {
         usersEl.style.display = "none";
         filtered_usersEl.innerHTML += `
