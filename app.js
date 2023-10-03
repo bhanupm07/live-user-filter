@@ -28,7 +28,7 @@ async function apiData() {
             `)
   );
 
-  inputEl.addEventListener("input", function (e) {
+  inputEl.addEventListener("keydown", function (e) {
     filtered_usersEl.textContent = "";
     data.users.forEach((user, i) => {
       let fullName = user.firstName + " " + user.lastName;
